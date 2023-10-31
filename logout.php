@@ -1,7 +1,7 @@
 <?php
 session_start(); // ประกาศใช้ session
 require_once './config/server.php'; // เชื่อมต่อกับฐานข้อมูล
-//header('Location: login.php'); // Logout เรียบร้อยและกระโดดไปหน้าตามที่ต้องการ
+//header('Location: index.php'); // Logout เรียบร้อยและกระโดดไปหน้าตามที่ต้องการ
 echo $_SESSION['login_datetime'];
 
 // ตรวจสอบว่ามีค่า session 'id' หรือไม่
@@ -48,8 +48,8 @@ if (isset($_SESSION['user_id'])) {
 
     
 } else {
-    // หากไม่มีค่า session 'id' ในระบบ ให้ Redirect ไปหน้า login.php โดยไม่ต้องอัปเดตสถานะ
-    header('Location: login.php');
+    // หากไม่มีค่า session 'id' ในระบบ ให้ Redirect ไปหน้า Index.php โดยไม่ต้องอัปเดตสถานะ
+    header('Location: index.php');
     exit;
 }
 ?>

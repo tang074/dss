@@ -15,7 +15,7 @@
     $extension = explode(".", $img['name']);
     $fileActExt = strtolower(end($extension));
     $fileNew = rand() . "." . $fileActExt;
-    $filePath = "upload/" . $fileNew;
+    $filePath = "upload/images/" . $fileNew;
 
 
     if(in_array($fileActExt, $allow)){
@@ -29,10 +29,10 @@
 
                 if($sql){
                     $_SESSION['success']="Data has been inserted successfully";
-                    header("location: index.php");
+                    header("location: addimage.php");
                 }else{
                     $_SESSION['error']="Data has not been inserted successfully";
-                    header("location: index.php");
+                    header("location: addimage.php");
                 }
             }
         }
